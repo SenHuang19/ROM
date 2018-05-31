@@ -1,0 +1,32 @@
+{
+	"inputs" : {
+		"nodes" : {
+		"node1":"Core_top",
+		"node2":"Perimeter_top_ZN_1",		
+		"node3":"Perimeter_top_ZN_2",
+		"node4":"Perimeter_top_ZN_3",
+		"node5":"Perimeter_top_ZN_4",
+		"node7":"Core_mid",
+		"node8":"Perimeter_mid_ZN_1",		
+		"node9":"Perimeter_mid_ZN_2",
+		"node10":"Perimeter_mid_ZN_3",
+		"node11":"Perimeter_mid_ZN_4",
+		"node13":"Core_top",
+		"node14":"Perimeter_bot_ZN_1",		
+		"node15":"Perimeter_bot_ZN_2",
+		"node16":"Perimeter_bot_ZN_3",
+		"node17":"Perimeter_bot_ZN_4"
+    },
+		"boiler_outnode" : {
+		"node1":"HeatSys1 Supply Inlet Node"
+	},	
+		"boiler_innode" : {
+		"node1":"HeatSys1 Supply Outlet Node"
+	}},	
+	"tout":"Environment:Site Outdoor Air Drybulb Temperature [C](TimeStep)",
+	"hc":1545807.62,
+	"eff":0.8125,
+	"outputs" : {
+	"boiler1":"HeatSys1 Boiler"}
+
+}
