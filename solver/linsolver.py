@@ -55,29 +55,32 @@ class solveLinearEquation(object):
         self._method()
         
         
-class solveDynamic:
+class solveDynamic(solveLinearEquation):
     """solve linear equations Ax=b in a dynamic time period. Note that b is dynamic and independent of previous time step.
     Therefore, a function to calculate b in terms of previous x should be built independently outside this solve based on 
     the solutions in self.xsol.
     
     """
     
-    def __init__(self, A,b,tStart,tEnd,dt,x0):
+    def __init__(self, A,b,b0,tStart,tEnd,dt,x0):
         """
         A: n-by-n array;
         b: n-by-1 array;
         x0: n-by-1 array;
         """
-        self.A = A
-        self.b = b
-        self.x = None
-        self._ill_condition_ = False  
+        solveLinearEquation.__init__(self,A,b)
+        self.bc=b
+        self.b0=b0
+        self.b = self.bc+x0*self.b0
+        print self.b
+#        self.x = None
+#        self._ill_condition_ = False  
         self.tStart = tStart
         self.tEnd = tEnd
         self.dt = dt 
         self.x0 = x0               
     
-    def solve(self):
+    def Dysolve(self):
         import numpy as np
         
         ts = np.arange(self.tStart,self.tEnd+self.dt,self.dt)
@@ -86,13 +89,14 @@ class solveDynamic:
         self.xsol = np.zeros([len(self.x0),len(ts)]) 
         
         for i in range(len(ts)):
-            eq = solveLinearEquation(self.A,self.b)
-            eq.solve()            
-            self.xsol[:,i] = eq.x.reshape(1,-1)
+#            eq = solveLinearEquation(self.A,self.b)
+            self.solve()
+            print  self.x            
+            self.xsol[:,i] = self.x.reshape(1,-1)
+            self.b = self.bc+self.x*self.b0
             
             
             
         
-     
-         
+  
         

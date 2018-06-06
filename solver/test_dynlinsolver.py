@@ -16,8 +16,10 @@ tEnd = 1200
 dt = 60
 x0=np.array([[0],[0]])
 
-equation = lin.solveDynamic(A,b,tStart=tStart, tEnd=tEnd, dt=dt, x0=x0)
+b0=np.array([[2],[3]])
 
-equation.solve()
+equation = lin.solveDynamic(A,b,b0,tStart=tStart, tEnd=tEnd, dt=dt, x0=x0)
+
+equation.Dysolve()
 
 
