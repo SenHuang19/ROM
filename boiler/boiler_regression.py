@@ -55,9 +55,9 @@ tab3['real']=tab['gas']
 tab3.to_csv('validation_result.csv')
 
 coefs={}
-coefs['c0']=regr.intercept_ 
+coefs['e0']=regr.intercept_ 
 for i in range(len(regr.coef_)):
-   coefs['c'+str(i+1)]=regr.coef_[i]
+   coefs['e'+str(i+1)]=regr.coef_[i]
 print coefs
 
 with open('boiler_result','w') as outfile:

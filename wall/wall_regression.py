@@ -59,9 +59,9 @@ tab3['real']=test
 tab3.to_csv('validation_result.csv')
 
 coefs={}
-coefs['c0']=regr.intercept_ 
+coefs['b0']=regr.intercept_ 
 for i in range(len(regr.coef_)):
-   coefs['c'+str(i+1)]=regr.coef_[i]
+   coefs['b'+str(i+1)]=regr.coef_[i]
 print coefs
 
 with open('wall_result','w') as outfile:

@@ -31,10 +31,7 @@
 		"node2":118.87		
 		}},
 		"zones":{
-		"node1":"Perimeter_bot_ZN_2",
-		"node2":"Perimeter_bot_ZN_1",
-		"node3":"Core_bottom",
-		"node4":"Perimeter_bot_ZN_3"		
+		"node1":"Basement"		
 		}		
 	},
 

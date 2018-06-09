@@ -2,21 +2,29 @@
 	"inputs" : {
 		"walls" : {
 		"wall1":{
-		"node1":"DataCenter_mid_ZN_6_Ceiling"
+		"node1":"Perimeter_top_ZN_1_Ceiling",
+		"node2":"Perimeter_top_ZN_2_Ceiling",
+		"node3":"Perimeter_top_ZN_3_Ceiling",
+		"node4":"Perimeter_top_ZN_4_Ceiling",
+		"node5":"Core_top_ZN_5_Ceiling"
 		},
 		"wall2":{
-		"node1":"DataCenter_mid_ZN_6_Wall_North",
-		"node2":"DataCenter_mid_ZN_6_Wall_South",
-		"node3":"DataCenter_mid_ZN_6_Wall_East-PPAutoCreateOther",
-		"node4":"DataCenter_mid_ZN_6_Wall_West",
-		"node5":"DataCenter_mid_ZN_6_Wall_North-PPAutoCreateOther",
-		"node6":"DataCenter_mid_ZN_6_Wall_South-PPAutoCreateOther",
-		"node7":"Core_mid_ZN_5_Wall_West",
-		"node8":"DataCenter_mid_ZN_6_Wall_West-PPAutoCreateOther"
+		"node1":"DataCenter_top_ZN_6_Wall_South-PPAutoCreateOther",
+		"node2":"DataCenter_top_ZN_6_Wall_North-PPAutoCreateOther",
+		"node3":"DataCenter_top_ZN_6_Wall_West-PPAutoCreateOther",
+		"node4":"Core_top_ZN_5_Wall_West",
+		"node5":"DataCenter_top_ZN_6_Wall_South",
+		"node6":"DataCenter_top_ZN_6_Wall_North",
+		"node7":"DataCenter_top_ZN_6_Wall_West",
+		"node8":"DataCenter_top_ZN_6_Wall_East"
 		}},
 		"wallarea" : {
 		"wall1":{
-		"node1":783.68	
+		"node1":313.42,
+		"node2":201.98,
+		"node3":313.41,
+		"node4":201.98,
+		"node5":2496.12		
 		},
 		"wall2":{
 		"node1":2.5,
@@ -29,7 +37,11 @@
 		"node8":108.88
 		}},
 		"zones":{
-		"node1":"DataCenter_mid_ZN_6"	
+		"node1":"Core_top",
+		"node2":"Perimeter_top_ZN_1",
+		"node3":"Perimeter_top_ZN_2",
+		"node4":"Perimeter_top_ZN_3",
+		"node5":"Perimeter_top_ZN_4"		
 		}		
 	},
 

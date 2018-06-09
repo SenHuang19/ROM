@@ -2,34 +2,36 @@
 	"inputs" : {
 		"walls" : {
 		"wall1":{
-		"node1":"DataCenter_top_ZN_6_Ceiling"
+		"node1":"Perimeter_bot_ZN_4_Floor-PPAutoCreateOther",
+		"node2":"DataCenter_basement_ZN_6_Ceiling-Core_bot_ZN_5",
+		"node3":"DataCenter_basement_ZN_6_Ceiling-Perimeter_bot_ZN_1",
+		"node4":"DataCenter_basement_ZN_6_Ceiling-Perimeter_bot_ZN_3",
+		"node5":"Perimeter_bot_ZN_4_Floor",
+		"node6":"DataCenter_basement_ZN_6_Ceiling-Core_bot_ZN_5-PPAutoCreateOther",
+		"node7":"DataCenter_basement_ZN_6-Perimeter_bot_ZN_1-PPAutoCreateOther",
+		"node8":"DataCenter_basement_ZN_6_Ceiling-Perimeter_bot_ZN_3-PPAutoCreateOther"
 		},
 		"wall2":{
-		"node1":"DataCenter_top_ZN_6_Wall_North",
-		"node2":"DataCenter_top_ZN_6_Wall_South",
-		"node3":"DataCenter_top_ZN_6_Wall_East-PPAutoCreateOther",
-		"node4":"DataCenter_top_ZN_6_Wall_West",
-		"node5":"DataCenter_top_ZN_6_Wall_North-PPAutoCreateOther",
-		"node6":"DataCenter_top_ZN_6_Wall_South-PPAutoCreateOther",
-		"node7":"Core_top_ZN_5_Wall_West",
-		"node8":"DataCenter_top_ZN_6_Wall_West-PPAutoCreateOther"
+		"node1":"DataCenter_basement_ZN_6_Wall_East",
+		"node2":"Basement_Wall_West"		
 		}},
 		"wallarea" : {
 		"wall1":{
-		"node1":783.68	
+		"node1":201.98,
+		"node2":419.3,
+		"node3":63.07,
+		"node4":63.07,
+		"node5":201.98,
+		"node6":419.3,
+		"node7":63.07,
+		"node8":63.07
 		},
 		"wall2":{
-		"node1":2.5,
-		"node2":2.5,
-		"node3":108.88,
-		"node4":108.88,
-		"node5":2.5,
-		"node6":2.5,
-		"node7":108.88,
-		"node8":108.88
+		"node1":118.87,
+		"node2":118.87	
 		}},
 		"zones":{
-		"node1":"DataCenter_top_ZN_6"	
+		"node1":"DataCenter_basement_ZN_6"		
 		}		
 	},
 

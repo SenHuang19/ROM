@@ -3,7 +3,7 @@ import json
 
 
 
-info = json.load(open('fan'))
+info = json.load(open('fan-top'))
 
 #fans
 fan=[]
@@ -11,8 +11,6 @@ for key in info["inputs"]["fans"]:
     fan.append(info["inputs"]["fans"][key])
 
 #rated power
-
-c=info["c"]
 
 tab=pd.read_csv('eplusout.csv')
 

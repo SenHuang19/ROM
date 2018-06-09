@@ -6,17 +6,24 @@
 		"node3":"Perimeter_top_ZN_2",
 		"node4":"Perimeter_top_ZN_3",
 		"node5":"Perimeter_top_ZN_4",
-		"node7":"Core_mid",
-		"node8":"Perimeter_mid_ZN_1",		
-		"node9":"Perimeter_mid_ZN_2",
-		"node10":"Perimeter_mid_ZN_3",
-		"node11":"Perimeter_mid_ZN_4",
-		"node13":"Core_top",
-		"node14":"Perimeter_bot_ZN_1",		
-		"node15":"Perimeter_bot_ZN_2",
-		"node16":"Perimeter_bot_ZN_3",
-		"node17":"Perimeter_bot_ZN_4"
-    },
+		"node6":"Core_mid",
+		"node7":"Perimeter_mid_ZN_1",		
+		"node8":"Perimeter_mid_ZN_2",
+		"node9":"Perimeter_mid_ZN_3",
+		"node10":"Perimeter_mid_ZN_4",
+		"node11":"Core_top",
+		"node12":"Perimeter_bot_ZN_1",		
+		"node13":"Perimeter_bot_ZN_2",
+		"node14":"Perimeter_bot_ZN_3",
+		"node15":"Perimeter_bot_ZN_4"
+	 },	
+	 	"ahus" : {
+		"node1":"VAV_TOP WITH REHEAT_HEATCDEMAND OUTLET NODE",
+		"node2":"VAV_MID WITH REHEAT_HEATCDEMAND OUTLET NODE",
+		"node3":"VAV_BOT WITH REHEAT_HEATCDEMAND OUTLET NODE",
+		"node4":"CAV_BAS_HEATCDEMAND OUTLET NODE",
+		"node5":"DataCenter_ExtraWaterHeatCDemand Outlet Node"		
+ 	 },	  
 		"boiler_outnode" : {
 		"node1":"HeatSys1 Supply Inlet Node"
 	},	

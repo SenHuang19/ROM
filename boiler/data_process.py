@@ -9,7 +9,10 @@ info = json.load(open('boiler'))
 nodes=[]
 for key in info["inputs"]["nodes"]:
     nodes.append(info["inputs"]["nodes"][key])
-
+ahus=[]
+for key in info["inputs"]["ahus"]:
+    ahus.append(info["inputs"]["ahus"][key])
+	
 #chiller outlet nodes
 boout=[]
 for key in info["inputs"]["boiler_outnode"]:
@@ -43,6 +46,8 @@ tab2['m']=[0]*len(tab)
 for i in range(len(nodes)):
     tab2['m']=tab2['m']+tab[str(nodes[i]).upper()+' VAV BOX REHEAT COILDEMAND INLET NODE:System Node Mass Flow Rate [kg/s](TimeStep)']
 
+for i in range(len(ahus)):
+    tab2['m']=tab2['m']+tab[str(ahus[i]).upper()+':System Node Mass Flow Rate [kg/s](TimeStep)']
 
 
 

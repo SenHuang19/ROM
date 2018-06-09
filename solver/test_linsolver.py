@@ -10,7 +10,7 @@ import numpy as np
 import linsolver as lin
 
 A=np.array([[1,2],[1,1]])
-b=np.array([[3],[2]])
+b=np.array([3,2])
 
 equation = lin.solveLinearEquation(A,b)
 

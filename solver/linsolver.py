@@ -7,6 +7,8 @@ where A keeps constant during each time step, b varies in each time step.
 Authour: Yangyang Fu
 Email: yangyang.fu@pnnl.gov 
 """
+import numpy as np
+
 class solveLinearEquation(object):
     """
     Solve linear equations
@@ -34,8 +36,8 @@ class solveLinearEquation(object):
             print ('Matrix A is ill-conditioned. Try LU-factorization or Singluar Value Decomposition to handle the ill-conditioness.') 
         else:
             self._ill_condition_ = False
-            print ('Matrix A is well-conditioned, and can be solved using exact method')
-            
+#            print ('Matrix A is well-conditioned, and can be solved using exact method')
+           
     def _method(self):
          """
          The equation Ax=b is solved based on the conditioness of A. If A is well conditioned, then use exact method. Otherwise use Singular Value Decomposition.
@@ -48,6 +50,7 @@ class solveLinearEquation(object):
              self.x = np.dot(np.dot(vh.transpose()*(1/s),u.transpose()),self.b)
          else:
              self.x = np.linalg.solve(self.A, self.b)
+#             print self.b
              
     def solve(self):
         
@@ -62,7 +65,7 @@ class solveDynamic(solveLinearEquation):
     
     """
     
-    def __init__(self, A,b,b0,tStart,tEnd,dt,x0):
+    def __init__(self, A,b,b0,num,x0):
         """
         A: n-by-n array;
         b: n-by-1 array;
@@ -71,29 +74,30 @@ class solveDynamic(solveLinearEquation):
         solveLinearEquation.__init__(self,A,b)
         self.bc=b
         self.b0=b0
-        self.b = self.bc+x0*self.b0
-        print self.b
+        self.x0 = x0
+        print self.x0*self.b0		
+        self.b = self.bc[0]+self.x0*self.b0
+#        print self.x0*self.b0
+#        print self.b
 #        self.x = None
 #        self._ill_condition_ = False  
-        self.tStart = tStart
-        self.tEnd = tEnd
-        self.dt = dt 
-        self.x0 = x0               
+        self.num = num 
+              
     
     def Dysolve(self):
-        import numpy as np
         
-        ts = np.arange(self.tStart,self.tEnd+self.dt,self.dt)
         
+        f=open('result.csv','w')
         # initialize the x before simulation starts
-        self.xsol = np.zeros([len(self.x0),len(ts)]) 
+        self.xsol = np.zeros([len(self.x0),self.num]) 
         
-        for i in range(len(ts)):
+        for i in range(0,self.num):
 #            eq = solveLinearEquation(self.A,self.b)
             self.solve()
-            print  self.x            
-            self.xsol[:,i] = self.x.reshape(1,-1)
-            self.b = self.bc+self.x*self.b0
+#            print self.x
+            f.writelines(str(self.x[0])+','+str(self.x[1])+','+str(self.x[2])+'\n')
+            self.b = self.bc[i]+self.x*self.b0
+        f.close()
             
             
             
