@@ -9,19 +9,20 @@ import json
 
 
 #read data
-tab=pd.read_csv('rawdata.csv')
+name='wall4'
+tab=pd.read_csv(name+'.csv')
 
 #training data
 tab_train=tab.loc[:7000]
-tab_train.to_csv('train.csv')
+tab_train.to_csv(name+'_train.csv')
 
 #testing data
 tab_test=tab.loc[7000:]
 
-tab_test.to_csv('validation.csv')
+tab_test.to_csv(name+'_validation.csv')
 
 #train the model
-tab=pd.read_csv('train.csv')
+tab=pd.read_csv(name+'_train.csv')
 
 #tabx=tab.loc[tab['gas'] >0]
 
@@ -34,11 +35,11 @@ y_pre1=regr.predict(x)
 tab2=pd.DataFrame()
 tab2['prediction']=y_pre1
 tab2['real']=y
-tab2.to_csv('comparison.csv')
+tab2.to_csv(name+'_comparison.csv')
 
 #validate the model
 
-tab=pd.read_csv('validation.csv')
+tab=pd.read_csv(name+'_validation.csv')
 pred=[]
 test=[]
 t=[tab['t1'][0]]
@@ -56,7 +57,7 @@ tab3['prediction']=pred
 
 tab3['real']=test
 
-tab3.to_csv('validation_result.csv')
+tab3.to_csv(name+'_validation_result.csv')
 
 coefs={}
 coefs['b0']=regr.intercept_ 
@@ -64,5 +65,5 @@ for i in range(len(regr.coef_)):
    coefs['b'+str(i+1)]=regr.coef_[i]
 print coefs
 
-with open('wall_result','w') as outfile:
+with open(name+'_result','w') as outfile:
       json.dump(coefs,outfile) 

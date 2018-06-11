@@ -30,7 +30,9 @@ for key2 in info["inputs"]["walls"]:
     temp=[]
     area=0
     for key in info["inputs"]["walls"][key2]:
-          tab['w'+str(i)]=tab['w'+str(i)]+(tab[info["inputs"]["walls"][key2][key].upper()+':Surface Inside Face Temperature [C](TimeStep)']+tab[info["inputs"]["walls"][key2][key].upper()+':Surface Outside Face Temperature [C](TimeStep)'])/2*(info["inputs"]["wallarea"][key2][key])
+          tab['w'+str(i)]=tab['w'+str(i)]+(tab[info["inputs"]["walls"][key2][key].upper()+
+             ':Surface Inside Face Temperature [C](TimeStep)']+tab[info["inputs"]["walls"][key2][key].upper()+
+                                               ':Surface Outside Face Temperature [C](TimeStep)'])/2*(info["inputs"]["wallarea"][key2][key])
           area=area+info["inputs"]["wallarea"][key2][key]
     tab['w'+str(i)]=tab['w'+str(i)]/area
     i=i+1
@@ -51,8 +53,8 @@ int=[]
 #sol=['Environment:Site Diffuse Solar Radiation Rate per Area [W/m2](TimeStep)','Environment:Site Direct Solar Radiation Rate per Area [W/m2](TimeStep)']
 for i in range(len(zones)):
     zmt.append(str(zones[i]).upper()+':Zone Mean Air Temperature [C](TimeStep)')
-    zmdm.append('AIRLOOP DATACENTER BASEMENT SUPPLY AIR OUTLET:System Node Mass Flow Rate [kg/s](TimeStep)')
-    zmdt.append('AIRLOOP DATACENTER BASEMENT SUPPLY AIR OUTLET:System Node Temperature [C](TimeStep)')
+    zmdm.append(str(zones[i]).upper()+' VAV BOX DAMPER NODE:System Node Mass Flow Rate [kg/s](TimeStep)')
+    zmdt.append(str(zones[i]).upper()+' VAV BOX DAMPER NODE:System Node Temperature [C](TimeStep)')
     int.append(str(zones[i]).upper()+':Zone Total Internal Total Heating Rate [W](TimeStep)')
 #    sol.append(str(zones[i]).upper()+':Zone Windows Total Transmitted Solar Radiation Rate [W](TimeStep)')
 
@@ -65,7 +67,7 @@ for i in range(len(zones)):
     tab['t1']=tab['t1']+tab[zmt[i]]*tab[zmdm[i]]
     tab['i']=tab['i']+tab[int[i]]
 
-    tab['t2']=tab['t2']+tab[zmdt[i]]
+    tab['t2']=tab['t2']+tab[zmt[i]]
     tab['m1']=tab['m1']+tab[zmdm[i]]
 
 for i in range(len(sol)):	
@@ -79,16 +81,16 @@ tab2['w2']=tab['w2']
 tab2['i']=tab['i']
 tab2['s']=tab['s']
 tab2['tout']=tab[tout]
-tab2['t2']=tab['t2']
+tab2['tout']=tab[tout]
 tab2['hsp']=tab[hsp]
 
 for i in range(len(zones)):
     name='m'+str(i)
-    tab2[name]=tab['AIRLOOP DATACENTER BASEMENT SUPPLY AIR OUTLET:System Node Mass Flow Rate [kg/s](TimeStep)']
-    #name='rh'+str(i)
-    #tab2[name]=tab[str(zones[i]).upper()+' VAV BOX REHEAT COILDEMAND INLET NODE:System Node Mass Flow Rate [kg/s](TimeStep)']
+    tab2[name]=tab[str(zones[i]).upper()+' VAV BOX DAMPER NODE:System Node Mass Flow Rate [kg/s](TimeStep)']
+    name='rh'+str(i)
+    tab2[name]=tab[str(zones[i]).upper()+' VAV BOX REHEAT COILDEMAND INLET NODE:System Node Mass Flow Rate [kg/s](TimeStep)']
     name='csp'+str(i)
     tab2[name]=tab[str(zones[i]).upper()+':Zone Thermostat Cooling Setpoint Temperature [C](TimeStep)']
 	
 
-tab2.to_csv('rawdata.CSV')
+tab2.to_csv('rawdata_zone3.CSV')
