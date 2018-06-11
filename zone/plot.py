@@ -12,8 +12,8 @@ def rmse(x,y):
         sum=sum+(x.iloc[i]-y.iloc[i])*(x[i]-y[i])
    return math.sqrt(sum/len(x))
 
-
-tab2=pd.read_csv('validation_result.csv')
+filename='zone8'
+tab2=pd.read_csv(filename+'validation_result.csv')
 
 
 x=np.arange(20,tab2['real'].max())
@@ -34,5 +34,5 @@ plt.ylabel('Prediction [degC]',fontsize=10)
 plt.xlim(20,x[-1])
 plt.ylim(20,x[-1])
 plt.legend()
-plt.savefig('validation.png',bbox_inches = 'tight',pad_inches = 0)
+plt.savefig(filename+'validation.png',bbox_inches = 'tight',pad_inches = 0)
 plt.show()

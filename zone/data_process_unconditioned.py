@@ -1,7 +1,8 @@
 import pandas as pd
 import json
 
-info = json.load(open('zone5'))
+filename='zone7'
+info = json.load(open(filename))
 
 tab=pd.read_csv('eplusout.csv')
 
@@ -91,4 +92,4 @@ for i in range(len(zones)):
     tab2[name]=tab[str(zones[i]).upper()+':Zone Thermostat Cooling Setpoint Temperature [C](TimeStep)']
 	
 
-tab2.to_csv('rawdata.CSV')
+tab2.to_csv(filename+'rawdata.CSV')
