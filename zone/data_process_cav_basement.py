@@ -2,7 +2,7 @@ import pandas as pd
 import json
 
 filename='zone1'
-info = json.load(open(name))
+info = json.load(open(filename))
 
 tab=pd.read_csv('eplusout.csv')
 

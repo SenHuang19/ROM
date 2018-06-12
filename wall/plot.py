@@ -12,7 +12,7 @@ def rmse(x,y):
         sum=sum+(x.iloc[i]-y.iloc[i])*(x[i]-y[i])
    return math.sqrt(sum/len(x))
 
-name='wall4'
+name='wall3'
 tab2=pd.read_csv(name+'_validation_result.csv')
 
 
