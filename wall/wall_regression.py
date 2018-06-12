@@ -9,7 +9,7 @@ import json
 
 
 #read data
-name='wall3'
+name='wall6'
 tab=pd.read_csv(name+'.csv')
 
 #training data
