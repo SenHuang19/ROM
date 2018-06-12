@@ -1,7 +1,8 @@
 import pandas as pd
 import json
 
-info = json.load(open('zone5'))
+filename='zone3'
+info = json.load(open(filename))
 
 tab=pd.read_csv('eplusout.csv')
 
@@ -51,8 +52,8 @@ int=[]
 #sol=['Environment:Site Diffuse Solar Radiation Rate per Area [W/m2](TimeStep)','Environment:Site Direct Solar Radiation Rate per Area [W/m2](TimeStep)']
 for i in range(len(zones)):
     zmt.append(str(zones[i]).upper()+':Zone Mean Air Temperature [C](TimeStep)')
-    zmdm.append('MIDFLOOR_PLENUM OUTLET NODE:System Node Mass Flow Rate [kg/s](TimeStep)')
-    zmdt.append('MIDFLOOR_PLENUM OUTLET NODE:System Node Temperature [C](TimeStep)')
+    zmdm.append(str(zones[i]).upper()+' OUTLET NODE:System Node Mass Flow Rate [kg/s](TimeStep)')
+    zmdt.append(str(zones[i]).upper()+' OUTLET NODE:System Node Temperature [C](TimeStep)')
     int.append(str(zones[i]).upper()+':Zone Total Internal Total Heating Rate [W](TimeStep)')
 #    sol.append(str(zones[i]).upper()+':Zone Windows Total Transmitted Solar Radiation Rate [W](TimeStep)')
 
@@ -84,11 +85,11 @@ tab2['hsp']=tab[hsp]
 
 for i in range(len(zones)):
     name='m'+str(i)
-    tab2[name]=tab['MIDFLOOR_PLENUM OUTLET NODE:System Node Mass Flow Rate [kg/s](TimeStep)']
+    tab2[name]=tab[str(zones[i]).upper()+' OUTLET NODE:System Node Mass Flow Rate [kg/s](TimeStep)']
     #name='rh'+str(i)
     #tab2[name]=tab[str(zones[i]).upper()+' VAV BOX REHEAT COILDEMAND INLET NODE:System Node Mass Flow Rate [kg/s](TimeStep)']
     name='csp'+str(i)
     tab2[name]=tab[str(zones[i]).upper()+':Zone Thermostat Cooling Setpoint Temperature [C](TimeStep)']
 	
 
-tab2.to_csv('rawdata.CSV')
+tab2.to_csv(filename+'rawdata.CSV')
