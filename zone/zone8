@@ -39,5 +39,5 @@
 	"solar":{
 	"node1":"Environment:Site Diffuse Solar Radiation Rate per Area [W/m2](TimeStep)",
 	"node2":"Environment:Site Direct Solar Radiation Rate per Area [W/m2](TimeStep)"},
-	"hsp":"HTGSETP_SCH_YES_OPTIMUM:Schedule Value [](TimeStep)"
+	"hsp":"HTGSETP_DC_SCH:Schedule Value [](TimeStep)"
 }
