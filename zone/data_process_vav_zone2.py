@@ -1,7 +1,7 @@
 import pandas as pd
 import json
 
-filename='zone4'
+filename='zone2'
 info = json.load(open(filename))
 
 tab=pd.read_csv('eplusout.csv')
@@ -78,8 +78,8 @@ for i in range(len(sol)):
 tab2=pd.DataFrame()
 tab2['t1']=tab['t1']/tab['m1']
 tab2['w1']=tab['w1']
-#tab2['w2']=tab['w2']
-#tab2['w3']=tab['w3']
+tab2['w2']=tab['w2']
+tab2['w3']=tab['w3']
 tab2['i']=tab['i']
 tab2['s']=tab['s']
 tab2['tout']=tab[tout]
