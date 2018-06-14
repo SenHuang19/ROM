@@ -1,0 +1,10 @@
+{
+	"inputs" : {
+		"fans" : {
+		"fan1":"VAV_bot WITH REHEAT FAN"
+    }},	
+
+	"outputs" : {
+	"fan1":"VAV_bot WITH REHEAT FAN"}
+
+}
