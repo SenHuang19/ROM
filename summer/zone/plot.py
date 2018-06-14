@@ -12,7 +12,7 @@ def rmse(x,y):
         sum=sum+(x.iloc[i]-y.iloc[i])*(x[i]-y[i])
    return math.sqrt(sum/len(x))
 
-filename='zone2'
+filename='zone6'
 tab2=pd.read_csv(filename+'validation_result.csv')
 
 

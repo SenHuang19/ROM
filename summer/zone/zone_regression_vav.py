@@ -9,7 +9,7 @@ import json
 
 
 #read data
-filename='zone2'
+filename='zone6'
 tab=pd.read_csv(filename+'rawdata.csv')
 
 #training data
