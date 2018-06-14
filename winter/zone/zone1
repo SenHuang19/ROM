@@ -1,0 +1,44 @@
+{
+	"inputs" : {
+		"walls" : {
+		"wall1":{
+		"node1":"Perimeter_bot_ZN_2_Floor-PPAutoCreateOther",
+		"node2":"Perimeter_bot_ZN_1_Floor-PPAutoCreateOther",
+		"node3":"Core_bot_ZN_5_Floor-PPAutoCreateOther",
+		"node4":"Perimeter_bot_ZN_3_Floor-PPAutoCreateOther",
+		"node5":"Perimeter_bot_ZN_2_Floor",
+		"node6":"Perimeter_bot_ZN_1_Floor",
+		"node7":"Core_bot_ZN_5_Floor",
+		"node8":"Perimeter_bot_ZN_3_Floor"
+		},
+		"wall2":{
+		"node1":"DataCenter_basement_ZN_6_Wall_East",
+		"node2":"Basement_Wall_West"	
+		}},
+		"wallarea" : {
+		"wall1":{
+		"node1":201.98,
+		"node2":313.42,
+		"node3":2496.12,
+		"node4":313.41,
+		"node5":201.98,
+		"node6":313.42,
+		"node7":2496.12,
+		"node8":313.41		
+		},
+		"wall2":{
+		"node1":118.87,
+		"node2":118.87		
+		}},
+		"zones":{
+		"node1":"Basement"		
+		}		
+	},
+
+	"tout":"Environment:Site Outdoor Air Drybulb Temperature [C](TimeStep)",
+	"solar":{
+	"node1":"Environment:Site Diffuse Solar Radiation Rate per Area [W/m2](TimeStep)",
+	"node2":"Environment:Site Direct Solar Radiation Rate per Area [W/m2](TimeStep)"},
+	"hsp":"HTGSETP_SCH_YES_OPTIMUM:Schedule Value [](TimeStep)",
+	"m0":4.958626
+}
