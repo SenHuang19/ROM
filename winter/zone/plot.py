@@ -6,13 +6,15 @@ import json
 import math
 
 
+filename='zone6'
+
 def rmse(x,y):
    sum=0
    for i in range(len(x)):
         sum=sum+(x.iloc[i]-y.iloc[i])*(x[i]-y[i])
    return math.sqrt(sum/len(x))
 
-filename='zone6'
+
 tab2=pd.read_csv(filename+'validation_result.csv')
 
 

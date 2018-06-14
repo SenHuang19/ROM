@@ -12,7 +12,7 @@ def rmse(x,y):
         sum=sum+(x.iloc[i]-y.iloc[i])*(x[i]-y[i])
    return math.sqrt(sum/len(x))
 
-info = json.load(open('fan'))
+info = json.load(open('fan-top'))
 cc=info["c"]
 cop=1
 

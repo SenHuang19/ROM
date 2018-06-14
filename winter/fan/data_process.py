@@ -3,7 +3,7 @@ import json
 
 
 
-info = json.load(open('fan-top'))
+info = json.load(open('fan-bot'))
 
 #fans
 fan=[]

@@ -1,7 +1,7 @@
 import pandas as pd
 import json
 
-filename='zone3'
+filename='zone7'
 info = json.load(open(filename))
 
 tab=pd.read_csv('eplusout.csv')
@@ -79,7 +79,6 @@ tab2['w1']=tab['w1']
 #tab2['w2']=tab['w2']
 tab2['i']=tab['i']
 tab2['s']=tab['s']
-tab2['tout']=tab[tout]
 tab2['tout']=tab[tout]
 tab2['hsp']=tab[hsp]
 
