@@ -27,7 +27,7 @@ tab=pd.read_csv(filename+'train.csv')
 #tabx=tab.loc[tab['gas'] >0]
 
 #x=zip(tab['tout'],tab['PLRs'],tab['hourindex']) 
-x=zip(tab['tout'][1:],tab['i'][1:],tab['t1'][:-1],tab['w1'][1:],tab['w2'][1:],tab['hsp'][1:],tab['csp0'][1:],tab['t2'][1:]) 
+x=zip(tab['tout'][1:],tab['i'][1:],tab['t1'][:-1],tab['w1'][1:],tab['hsp'][1:],tab['csp0'][1:],tab['t2'][1:]) 
 y=tab['t1'][1:]
 regr.fit(x, y)
 y_pre1=regr.predict(x)
@@ -45,7 +45,7 @@ test=[]
 t=[tab['t1'][0]]
 for i in range(len(tab)-1):
     #x=zip(tab['tout'][1:],tab['i'][1:],tab['t1'][:-1],tab['hsp'][1:],tab['csp0'][1:],tab['t2'][1:],tab['w1'][1:],tab['w2'][1:]) 
-    x=zip(tab['tout'][i+1:i+2],tab['i'][i+1:i+2],t,tab['w1'][i+1:i+2],tab['w2'][i+1:i+2],tab['hsp'][1:],tab['csp0'][i+1:i+2],tab['t2'][i+1:i+2]) 
+    x=zip(tab['tout'][i+1:i+2],tab['i'][i+1:i+2],t,tab['w1'][i+1:i+2],tab['hsp'][1:],tab['csp0'][i+1:i+2],tab['t2'][i+1:i+2]) 
     y_pre2=regr.predict(x)
     t=y_pre2
     pred.append(y_pre2[0])	
