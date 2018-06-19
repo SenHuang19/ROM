@@ -6,7 +6,7 @@ import json
 import math
 
 
-filename='zone6'
+filename='zone3'
 
 def rmse(x,y):
    sum=0
@@ -18,7 +18,7 @@ def rmse(x,y):
 tab2=pd.read_csv(filename+'validation_result.csv')
 
 
-x=np.arange(20,tab2['real'].max())
+x=np.arange(200,tab2['real'].max())
 
 
 plt.scatter(tab2['real'],tab2['prediction'],color='y')
@@ -30,11 +30,11 @@ plt.plot(x,x-2.0/9*5,color='r')
 
 #plt.plot(x[7000:],tab[tout][7000:],label='testing data')
 
-plt.xlabel('Real [degC]',fontsize=10)
-plt.ylabel('Prediction [degC]',fontsize=10)
+plt.xlabel('Real [C]',fontsize=10)
+plt.ylabel('Prediction [C]',fontsize=10)
 #plt.xticks(xnum,xlab)
-plt.xlim(20,x[-1])
+#plt.xlim(20,x[-1])
 plt.ylim(20,x[-1])
-plt.legend()
+plt.legend(loc='best')
 plt.savefig(filename+'validation.png',bbox_inches = 'tight',pad_inches = 0)
 plt.show()

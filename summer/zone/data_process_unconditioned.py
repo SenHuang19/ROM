@@ -1,7 +1,7 @@
 import pandas as pd
 import json
 
-filename='zone5'
+filename='zone7'
 info = json.load(open(filename))
 
 tab=pd.read_csv('eplusout.csv')
@@ -63,10 +63,11 @@ tab['t2']=[0]*len(tab)
 tab['i']=[0]*len(tab)
 tab['s']=[0]*len(tab)
 for i in range(len(zones)):
-    tab['t1']=tab['t1']+tab[zmt[i]]*tab[zmdm[i]]
+    tab['t1']=tab['t1']+(tab[zmt[i]])*tab[zmdm[i]]
+    #tab['t1']=tab['t1']+tab[zmt[i]]*tab[zmdm[i]]
     tab['i']=tab['i']+tab[int[i]]
-
-    tab['t2']=tab['t2']+tab[zmt[i]]
+    tab['t2']=tab['t2']+tab[zmdt[i]]
+    #tab['t2']=tab['t2']+tab[zmt[i]]
     tab['m1']=tab['m1']+tab[zmdm[i]]
 
 for i in range(len(sol)):	
@@ -75,12 +76,12 @@ for i in range(len(sol)):
 	
 tab2=pd.DataFrame()
 tab2['t1']=tab['t1']/tab['m1']
+tab2['t2']=tab['t2']
 tab2['w1']=tab['w1']
-#tab2['w2']=tab['w2']
 tab2['i']=tab['i']
 tab2['s']=tab['s']
 tab2['tout']=tab[tout]
-tab2['tout']=tab[tout]
+#tab2['tout']=tab[tout]
 tab2['hsp']=tab[hsp]
 
 for i in range(len(zones)):
@@ -90,6 +91,7 @@ for i in range(len(zones)):
     #tab2[name]=tab[str(zones[i]).upper()+' VAV BOX REHEAT COILDEMAND INLET NODE:System Node Mass Flow Rate [kg/s](TimeStep)']
     name='csp'+str(i)
     tab2[name]=tab[str(zones[i]).upper()+':Zone Thermostat Cooling Setpoint Temperature [C](TimeStep)']
+    #tab2[name]=tab[str(zones[i]).upper()+':Zone Thermostat Cooling Setpoint Temperature [C](TimeStep)']
 	
 
 tab2.to_csv(filename+'rawdata.CSV')
