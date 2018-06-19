@@ -16,7 +16,7 @@ name='wall4'
 tab2=pd.read_csv(name+'_validation_result.csv')
 
 
-x=np.arange(20,tab2['real'].max())
+x=np.arange(20,tab2['real'].max()+1)
 
 
 plt.scatter(tab2['real'],tab2['prediction'],color='y')

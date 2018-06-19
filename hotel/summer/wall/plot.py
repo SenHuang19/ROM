@@ -5,7 +5,7 @@ import math
 import json
 import math
 
-filename='wall1-4'
+filename='wall2-4'
 def rmse(x,y):
    sum=0
    for i in range(len(x)):

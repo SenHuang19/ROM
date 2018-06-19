@@ -42,7 +42,7 @@ tab2.to_csv(name+'_comparison.csv')
 tab=pd.read_csv(name+'_validation.csv')
 pred=[]
 test=[]
-t=[tab['t1'][0]]
+t=[tab['w1'][0]]
 for i in range(len(tab)-1):
     x=zip(tab['t1'][i+1:i+2],tab['t2'][i+1:i+2],t)  
     y_pre2=regr.predict(x)
