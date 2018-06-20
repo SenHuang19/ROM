@@ -10,7 +10,7 @@ import itertools as it
 
 
 #read data
-filename='zone2'
+filename='zone3'
 info = json.load(open(filename))
 
 zones=[]
@@ -61,7 +61,8 @@ for i in range(len(walls)):
     z.append(tab['w'+str(i)][1:])
 #z.append(tab['w1'][1:])
 z.append(tab['hsp'][1:])
-z.append(tab['csp'][1:])
+for i in range(len(zones)):
+    z.append(tab['csp'+str(i)][1:])
 for i in range(len(zones)):
     z.append(tab['m'+str(i)][1:])
 for i in range(len(zones)):
@@ -105,7 +106,8 @@ for i in range(len(tab)-1):
     for j in range(len(walls)):
         z.append(tab['w'+str(j)][i+1:i+2])
     z.append(tab['hsp'][i+1:i+2])
-    z.append(tab['csp'][i+1:i+2])
+    for j in range(len(zones)):
+        z.append(tab['csp'+str(j)][i+1:i+2])
     for j in range(len(zones)):
         z.append(tab['m'+str(j)][i+1:i+2])
     for j in range(len(zones)):

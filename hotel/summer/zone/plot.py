@@ -6,7 +6,7 @@ import json
 import math
 
 
-filename='zone1'
+filename='zone3'
 
 def rmse(x,y):
    sum=0
