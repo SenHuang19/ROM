@@ -45,7 +45,7 @@ for key2 in sorted(info["inputs"]["walls"]):
 
 tout=info["tout"]
 hsp=info["hsp"]
-csp=info["csp"]
+#csp=info["csp"]
 
 
 
@@ -98,15 +98,15 @@ tab2['i']=tab['i']
 tab2['s']=tab['s']
 tab2['tout']=tab[tout]
 tab2['hsp']=tab[hsp]
-tab2['csp']=tab[csp]
+#tab2['csp']=tab[csp]
 
 for i in range(len(zones)):
     name='m'+str(i)
     tab2[name]=tab[str(zones[i]).upper()+' VAV BOX DAMPER NODE:System Node Mass Flow Rate [kg/s](TimeStep)']
     name='rh'+str(i)
     tab2[name]=tab[mrh[i]]*(tab[inlet[i]]-tab[outlet[i]])*4200
-    #name='csp'+str(i)
-    #tab2[name]=tab[str(zones[i]).upper()+':Zone Thermostat Cooling Setpoint Temperature [C](TimeStep)']
+    name='csp'+str(i)
+    tab2[name]=tab[str(zones[i]).upper()+':Zone Thermostat Cooling Setpoint Temperature [C](TimeStep)']
 	
 
 tab2.to_csv(filename+'rawdata.CSV')
