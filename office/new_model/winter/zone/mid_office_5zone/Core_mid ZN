@@ -1,0 +1,43 @@
+{
+	"inputs" : {
+		"walls" : {
+		"wall1":{
+		"node1":"Core_mid_ZN_5_Ceiling",
+		"node2":"Core_mid_ZN_5_Ceiling Reversed"
+		},
+		"wall2":{
+		"node1":"Core_mid_ZN_5_Wall_East",
+		"node2":"Core_mid_ZN_5_Wall_North",
+		"node3":"Core_mid_ZN_5_Wall_South",
+		"node4":"Core_mid_ZN_5_Wall_West",
+		"node5":"Core_mid_ZN_5_Wall_East-PPAutoCreateOther",
+		"node6":"Core_mid_ZN_5_Wall_North-PPAutoCreateOther",
+		"node7":"Core_mid_ZN_5_Wall_South-PPAutoCreateOther",
+		"node8":"DataCenter_mid_ZN_6_Wall_East"		
+		}},
+		"wallarea" : {
+		"wall1":{
+		"node1":2496.12,
+		"node2":2496.12			
+		},
+		"wall2":{
+		"node1":108.64,
+		"node2":173,
+		"node3":173,
+		"node4":108.64,
+		"node5":108.64,
+		"node6":173,
+		"node7":173,
+		"node8":108.64		
+		}},
+		"zones":{
+		"node1":"Core_mid ZN"		
+		}		
+	},
+
+	"tout":"Environment:Site Outdoor Air Drybulb Temperature [C](TimeStep)",
+	"solar":{
+	"node1":"Environment:Site Diffuse Solar Radiation Rate per Area [W/m2](TimeStep)",
+	"node2":"Environment:Site Direct Solar Radiation Rate per Area [W/m2](TimeStep)"},
+	"hsp":"HTGSETP_SCH_YES_OPTIMUM:Schedule Value [](TimeStep)"
+}

@@ -1,0 +1,39 @@
+{
+	"inputs" : {
+		"walls" : {
+		"wall1":{
+		"node1":"Perimeter_top_ZN_1_Ceiling",
+		"node2":"Perimeter_top_ZN_2_Ceiling",
+		"node3":"Perimeter_top_ZN_3_Ceiling",
+		"node4":"Perimeter_top_ZN_4_Ceiling",
+		"node5":"Core_top_ZN_5_Ceiling",
+		"node6":"Perimeter_top_ZN_1_Ceiling Reversed",
+		"node7":"Perimeter_top_ZN_2_Ceiling Reversed",
+		"node8":"Perimeter_top_ZN_3_Ceiling Reversed",
+		"node9":"Perimeter_top_ZN_4_Ceiling Reversed",
+		"node10":"Core_top_ZN_5_Ceiling Reversed"
+		}},
+		"wallarea" : {
+		"wall1":{
+		"node1":313.42,
+		"node2":201.98,
+		"node3":313.41,
+		"node4":201.98,
+		"node5":2496.12,
+		"node6":313.42,
+		"node7":201.98,
+		"node8":313.42,
+		"node9":201.98,
+		"node10":2496.12			
+		}},
+		"zones":{
+		"node1":"TopFloor_Plenum ZN"	
+		}		
+	},
+
+	"tout":"Environment:Site Outdoor Air Drybulb Temperature [C](TimeStep)",
+	"solar":{
+	"node1":"Environment:Site Diffuse Solar Radiation Rate per Area [W/m2](TimeStep)",
+	"node2":"Environment:Site Direct Solar Radiation Rate per Area [W/m2](TimeStep)"},
+	"hsp":"HTGSETP_SCH_YES_OPTIMUM:Schedule Value [](TimeStep)"
+}
