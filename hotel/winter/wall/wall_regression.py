@@ -6,10 +6,12 @@ import sys
 import numpy as np
 regr = linear_model.LinearRegression()
 import json
+import collections
+from collections import OrderedDict
 
 
 #read data
-name='wall1-4'
+name='wall2-4'
 tab=pd.read_csv(name+'.csv')
 
 #training data
@@ -59,7 +61,7 @@ tab3['real']=test
 
 tab3.to_csv(name+'_validation_result.csv')
 
-coefs={}
+coefs=collections.OrderedDict()
 coefs['b0']=regr.intercept_ 
 for i in range(len(regr.coef_)):
    coefs['b'+str(i+1)]=regr.coef_[i]

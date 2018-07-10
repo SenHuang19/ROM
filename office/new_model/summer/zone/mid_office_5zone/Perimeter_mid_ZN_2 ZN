@@ -1,0 +1,39 @@
+{
+	"inputs" : {
+		"walls" : {
+		"wall1":{
+		"node1":"Perimeter_mid_ZN_2_Ceiling",
+		"node2":"Perimeter_mid_ZN_2_Ceiling Reversed"
+		},
+		"wall2":{
+		"node1":"Core_mid_ZN_5_Wall_East-PPAutoCreateOther",
+		"node2":"Perimeter_mid_ZN_1_Wall_East-PPAutoCreateOther",
+		"node3":"Perimeter_mid_ZN_2_Wall_North",
+		"node4":"Core_mid_ZN_5_Wall_East",
+		"node5":"Perimeter_mid_ZN_1_Wall_East",
+		"node6":"Perimeter_mid_ZN_2_Wall_North-PPAutoCreateOther"
+		}},
+		"wallarea" : {
+		"wall1":{
+		"node1":201.98,
+		"node2":201.98
+		},
+		"wall2":{
+		"node1":108.64,
+		"node2":17.75,
+		"node3":17.75,
+		"node4":108.64,
+		"node5":17.75,
+		"node6":17.75
+		}},
+		"zones":{
+		"node1":"Perimeter_mid_ZN_2 ZN"	
+		}		
+	},
+
+	"tout":"Environment:Site Outdoor Air Drybulb Temperature [C](TimeStep)",
+	"solar":{
+	"node1":"Environment:Site Diffuse Solar Radiation Rate per Area [W/m2](TimeStep)",
+	"node2":"Environment:Site Direct Solar Radiation Rate per Area [W/m2](TimeStep)"},
+	"hsp":"HTGSETP_SCH_YES_OPTIMUM:Schedule Value [](TimeStep)"
+}

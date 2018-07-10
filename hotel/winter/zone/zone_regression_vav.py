@@ -7,6 +7,8 @@ import numpy as np
 regr = linear_model.LinearRegression()
 import json
 import itertools as it
+import collections
+from collections import OrderedDict
 
 
 #read data
@@ -131,7 +133,7 @@ tab3['real']=test
 
 tab3.to_csv(filename+'validation_result.csv')
 
-coefs={}
+coefs=collections.OrderedDict()
 coefs['a0']=regr.intercept_ 
 for i in range(len(regr.coef_)):
    coefs['a'+str(i+1)]=regr.coef_[i]
