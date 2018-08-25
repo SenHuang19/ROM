@@ -19,9 +19,9 @@ A=np.array([[1,-coe41['a5'],-coe41['a6'],0,-coe41['a7'],-coe41['a8']],
             [0,-coe43['a5'],1,-coe43['a6'],-coe43['a7'],-coe43['a8']],
             [-coe44['a5'],0,-coe44['a6'],1,-coe44['a7'],-coe44['a8']],
             [-coe45['a5'],-coe45['a6'],-coe45['a7'],-coe45['a8'],1,-coe45['a9']],
-            [-coe5['a5'],-coe5['a6'],-coe5['a7'],-coe5['a8'],-coe5['a9'],1]])
+            [-coe5['a4'],-coe5['a5'],-coe5['a6'],-coe5['a7'],-coe5['a8'],1]])
 
-b0=np.array([coe41['a4'],coe42['a4'],coe43['a4'],coe44['a4'],coe45['a4'],coe5['a4']])
+b0=np.array([coe41['a4'],coe42['a4'],coe43['a4'],coe44['a4'],coe45['a4'],coe5['a3']])
 
 
 

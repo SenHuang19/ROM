@@ -44,7 +44,7 @@ tab=pd.read_csv(filename+'train.csv')
 z=[]
 z.append(tab['tout'][:-1])
 z.append(tab['s'][:-1])
-z.append(tab['i'][:-1])
+#z.append(tab['i'][:-1])
 z.append(tab['t1'][:-1])
 z.append(tab['t2'][:-1])
 #z.append(tab['w1'][1:])
@@ -85,7 +85,7 @@ for i in range(len(tab)-1):
     
     z.append(tab['tout'][i:i+1])
     z.append(tab['s'][i:i+1])
-    z.append(tab['i'][i:i+1])
+#    z.append(tab['i'][i:i+1])
     z.append(t)
     z.append(tab['t2'][i:i+1])
 

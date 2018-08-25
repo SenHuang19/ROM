@@ -64,7 +64,7 @@ tab['s']=[0]*len(tab)
 
 for i in range(len(zones)):
     tab['t1']=tab['t1']+tab[zmt[i]]*tab[zmdm[i]]
-    tab['i']=tab['i']+tab[int[i]]
+#    tab['i']=tab['i']+tab[int[i]]
     tab['m1']=tab['m1']+tab[zmdm[i]]
 #    tab['rh']=tab['rh']+tab[mrh[i]]*(tab[inlet[i]]-tab[outlet[i]])*4200
 
@@ -82,7 +82,7 @@ tab2=pd.DataFrame()
 #    tab2['w'+str(j)]=tab['w'+str(j+1)]
 tab2['tout']=tab[tout]
 tab2['s']=tab['s']
-tab2['i']=tab['i']
+#tab2['i']=tab['i']
 tab2['t1']=tab['t1']/tab['m1']
 
 # adjacent zone temperature

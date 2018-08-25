@@ -11,9 +11,9 @@ coe4=json.load(open('zone4_result'))
 coe5=json.load(open('zone5_result'))
 
 A=np.array([[1,-coe4['a5']],
-            [-coe5['a5'],1]])
+            [-coe5['a4'],1]])
 
-b0=np.array([coe4['a4'],coe5['a4']])
+b0=np.array([coe4['a4'],coe5['a3']])
 
 
 

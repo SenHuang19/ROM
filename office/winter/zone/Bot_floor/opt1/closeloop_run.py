@@ -12,10 +12,10 @@ coe5=json.load(open('zone5_result'))
 coe6=json.load(open('zone6_result'))
 
 A=np.array([[1,-coe4['a5'],-coe4['a6']],
-            [-coe5['a5'],1,0],
+            [-coe5['a4'],1,0],
             [-coe6['a5'],0,1]])
 
-b0=np.array([coe4['a4'],coe5['a4'],coe6['a4']])
+b0=np.array([coe4['a4'],coe5['a3'],coe6['a4']])
 
 
 

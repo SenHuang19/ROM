@@ -66,7 +66,7 @@ tab5=pd.read_csv('zone5validation.csv')
 coe5=json.load(open('zone5_result'))
 print(len(coe5))
 sum5=[0]*len(tab5)
-sum5=coe5['a0']+coe5['a1']*tab5['tout']+coe5['a2']*tab5['s']+coe5['a3']*tab5['i']+coe5['a10']*tab5['m']
+sum5=coe5['a0']+coe5['a1']*tab5['tout']+coe5['a2']*tab5['s']+coe5['a9']*tab5['m']
 #sum5=[0]*len(tab5)
 #for i in range(len(coe5)-1):
 #    sum5=sum5+coe5['a'+str(i+1)]*tab5[c1[i+1]]

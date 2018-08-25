@@ -11,7 +11,7 @@ sum4=coe4['a0']+coe4['a1']*tab4['tout']+coe4['a2']*tab4['s']+coe4['a3']*tab4['i'
 
 tab5=pd.read_csv('zone5validation.csv')
 sum5=[0]*len(tab5)
-sum5=coe5['a0']+coe5['a1']*tab5['tout']+coe5['a2']*tab5['s']+coe5['a3']*tab5['i']+coe5['a6']*tab5['m']
+sum5=coe5['a0']+coe5['a1']*tab5['tout']+coe5['a2']*tab5['s']+coe5['a5']*tab5['m']
 
 tab=pd.DataFrame()
 tab['b4']=sum4
