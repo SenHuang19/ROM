@@ -1,0 +1,13 @@
+{
+	"inputs" : {
+		"fans" : {
+		"fan1":"VAV_bot WITH REHEAT FAN",
+		"fan2":"VAV_mid WITH REHEAT Fan",
+		"fan3":"VAV_top WITH REHEAT Fan"
+    },
+    "Nodes" : {
+		"node1":"Node 74",
+		"node2":"Node 113",
+		"node3":"Node 152"
+    }}
+}

@@ -1,0 +1,24 @@
+{
+	"inputs" : {
+		"coils" : {
+		"coil1":"CAV_bas Clg Coil",
+		"coil2":"VAV_bot WITH REHEAT Clg Coil",
+		"coil3":"VAV_mid WITH REHEAT Clg Coil",
+		"coil4":"VAV_top WITH REHEAT Clg Coil"		
+    },
+    "OutNodes" : {
+		"node1":"Node 196",
+		"node2":"Node 77",
+		"node3":"Node 116",
+		"node4":"Node 155"	
+    },
+    "IntNodes" : {
+		"node1":"Node 199",
+		"node2":"Node 82",
+		"node3":"Node 121",
+		"node4":"Node 160"	
+    },
+    "tout":"Environment:Site Outdoor Air Drybulb Temperature [C](TimeStep)",
+    "name":"90.1-2010 WaterCooled  Centrifugal Chiller 0 736tons 0.6kW/ton"
+	}
+}

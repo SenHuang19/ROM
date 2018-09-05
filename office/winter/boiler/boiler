@@ -1,0 +1,60 @@
+{
+	"inputs": {
+		"coils": {
+			"coil1": "Basement ZN Rht Coil",
+			"coil2": "Core_bottom ZN Rht Coil",
+			"coil3": "Core_mid ZN Rht Coil",
+			"coil4": "Core_top ZN Rht Coil",
+			"coil5": "Perimeter_bot_ZN_1 ZN Rht Coil",
+			"coil6": "Perimeter_bot_ZN_2 ZN Rht Coil",
+			"coil7": "Perimeter_bot_ZN_3 ZN Rht Coil",
+			"coil8": "Perimeter_bot_ZN_4 ZN Rht Coil",
+			"coil9": "Perimeter_mid_ZN_1 ZN Rht Coil",
+			"coil10": "Perimeter_mid_ZN_2 ZN Rht Coil",
+			"coil11": "Perimeter_mid_ZN_3 ZN Rht Coil",
+			"coil12": "Perimeter_mid_ZN_4 ZN Rht Coil",
+			"coil13": "Perimeter_top_ZN_1 ZN Rht Coil",
+			"coil14": "Perimeter_top_ZN_2 ZN Rht Coil",
+			"coil15": "Perimeter_top_ZN_3 ZN Rht Coil",
+			"coil16": "Perimeter_top_ZN_4 ZN Rht Coil"
+		},
+		"OutNodes": {
+			"node1": "Node 201",
+			"node2": "Node 104",
+			"node3": "Node 143",
+			"node4": "Node 182",
+			"node5": "Node 84",
+			"node6": "Node 89",
+			"node7": "Node 94",
+			"node8": "Node 99",
+			"node9": "Node 123",
+			"node10": "Node 128",
+			"node11": "Node 133",
+			"node12": "Node 138",
+			"node13": "Node 162",
+			"node14": "Node 167",
+			"node15": "Node 172",
+			"node16": "Node 177"
+		},
+		"IntNodes": {
+			"node1": "Node 200",
+			"node2": "Node 103",
+			"node3": "Node 142",
+			"node4": "Node 181",
+			"node5": "Node 83",
+			"node6": "Node 87",
+			"node7": "Node 93",
+			"node8": "Node 98",
+			"node9": "Node 122",
+			"node10": "Node 126",
+			"node11": "Node 132",
+			"node12": "Node 137",
+			"node13": "Node 161",
+			"node14": "Node 165",
+			"node15": "Node 171",
+			"node16": "Node 176"
+		},
+		"tout": "Environment:Site Outdoor Air Drybulb Temperature [C](TimeStep)",
+		"name": "Hot Water Loop Boiler 8806kBtu/hr 0.8 Thermal Eff"
+	}
+}
