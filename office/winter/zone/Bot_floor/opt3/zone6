@@ -4,10 +4,10 @@
 		"node1":"Basement ZN"
 		},
 		"adjzones":{
-		"node1":"Core_bottom ZN",
-		"node2":"Perimeter_bot_ZN_1 ZN",
-		"node3":"Perimeter_bot_ZN_2 ZN",
-		"node4":"Perimeter_bot_ZN_3 ZN"
+		"node1":"Perimeter_bot_ZN_1 ZN",
+		"node2":"Perimeter_bot_ZN_2 ZN",
+		"node3":"Perimeter_bot_ZN_3 ZN",
+		"node4":"Core_bottom ZN"
 		},
 		"termoutlet":{
 		"node1":"Node 190"

@@ -4,8 +4,8 @@
 		"node1":"Retail_1_Flr_1 ZN"	
 		},
 		"adjzones":{
-		"node1":"Lobby_Flr_1 ZN",
-		"node2":"Retail_2_Flr_1 ZN",
+		"node1":"Retail_2_Flr_1 ZN",
+		"node2":"Lobby_Flr_1 ZN",
 		"node3":"Basement ZN"
 		},
 		"termoutlet":{

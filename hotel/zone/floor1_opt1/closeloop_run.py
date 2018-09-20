@@ -85,19 +85,19 @@ tab = pd.read_csv('result.csv',index_col=False,names=colnames, header=None)
 
 x=np.arange(len(tab['t1']))   
 
-plt.plot(x,tab['t18'],label='Zone1-8 predicted',color='b')   
-plt.plot(x,initial['t18'],label='Zone1-8 real',color='r')   
+plt.plot(x,tab['t1'],label='Zone1 predicted',color='b')   
+plt.plot(x,initial['t1'],label='Zone1 real',color='r')   
 #plt.plot(x,tab2['t1'],label='real',color='r')   
 plt.legend()
 plt.xlabel('Timestep',fontsize=10)
 plt.ylabel('Predicted Temperature [degC]',fontsize=10) 
-plt.savefig('zone18timestep_cl.png',bbox_inches = 'tight',pad_inches = 0)     
+plt.savefig('zone1timestep_cl.png',bbox_inches = 'tight',pad_inches = 0)     
 plt.show()
 
 
-x=np.arange(20,initial['t18'].max()+1)
+x=np.arange(20,initial['t1'].max()+1)
 
-plt.scatter(initial['t18'],tab['t18'],label='Zone1-8 close loop RMSE:'+str(round(rmse(initial['t18'],tab['t18']), 3))+')',color='y')
+plt.scatter(initial['t1'],tab['t1'],label='Zone1 close loop RMSE:'+str(round(rmse(initial['t18'],tab['t18']), 3))+')',color='y')
 #plt.scatter(initial['t5'],tab['t5'],label='option3 RMSE:'+str(round(rmse(tab2['t1'],option3), 3))+')',color='y')
 
 plt.plot(x,x+2.0/9*5,color='r')
@@ -109,5 +109,5 @@ plt.ylabel('Prediction [degC]',fontsize=10)
 plt.xlim(20,x[-1])
 plt.ylim(20,x[-1])
 plt.legend()
-plt.savefig('zone18validation_cl.png',bbox_inches = 'tight',pad_inches = 0)  
+plt.savefig('zone1validation_cl.png',bbox_inches = 'tight',pad_inches = 0)  
 

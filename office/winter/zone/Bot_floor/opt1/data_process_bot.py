@@ -122,11 +122,8 @@ tab2['t1']=tab['t1']/tab['m1']
 # for cav system
 if tab['m1'][0]==0:
     tab2['t1']=tab[zmt[0]]
-name='t2'
-tab2[name]=[0]*len(tab2)
-for i in range(len(adjzones)):    
-    tab2[name]=tab2[name]+tab[adjt[i]]
-tab2[name]=tab2[name]/len(adjzones)
+tab3=pd.read_csv('zone4rawdata.csv')
+tab2['t2']=tab3['t1']
 for i in range(len(zones)):
     name='sp'+str(i)
     tab2[name]=tab[str(zones[i]).upper()+':Zone Thermostat Heating Setpoint Temperature [C](TimeStep)']
