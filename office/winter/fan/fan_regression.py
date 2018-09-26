@@ -30,7 +30,7 @@ tab_test.to_csv('validation.csv')
 tab=pd.read_csv('train.csv')
 
 #tabx=tab.loc[tab['gas'] >0]
-for s in range(3):
+for s in range(4):
 #x=zip(tab['tout'],tab['PLRs'],tab['hourindex']) 
    x=zip(tab['m'+str(s)],tab['m'+str(s)]*tab['m'+str(s)])   
    y=tab['p'+str(s)]

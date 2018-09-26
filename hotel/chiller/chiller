@@ -1,0 +1,39 @@
+{
+	"inputs" : {
+		"coils" : {
+		"coil1":"Room_1_Flr_3 ZN 'FCU Cooling Coil",
+		"coil2":"Room_1_Flr_6 ZN 'FCU Cooling Coil",
+		"coil3":"Room_2_Flr_3 ZN 'FCU Cooling Coil",
+		"coil4":"Room_2_Flr_6 ZN 'FCU Cooling Coil",
+		"coil5":"Room_3_Mult19_Flr_3 ZN 'FCU Cooling Coil",
+		"coil6":"Room_4_Mult19_Flr_3 ZN 'FCU Cooling Coil",
+		"coil7":"Room_5_Flr_3 ZN 'FCU Cooling Coil",
+		"coil8":"Room_6_Flr_3 ZN 'FCU Cooling Coil",
+		"coil9":"VAV WITH REHEAT Clg Coil"
+    },
+    "OutNodes" : {
+		"node1":"Node 162",
+		"node2":"Node 198",
+		"node3":"Node 168",
+		"node4":"Node 204",
+		"node5":"Node 174",
+		"node6":"Node 180",
+		"node7":"Node 186",
+		"node8":"Node 192",
+		"node9":"Node 139"
+    },
+    "IntNodes" : {
+		"node1":"Node 161",
+		"node2":"Node 197",
+		"node3":"Node 167",
+		"node4":"Node 203",
+		"node5":"Node 173",
+		"node6":"Node 179",
+		"node7":"Node 175",
+		"node8":"Node 191",
+		"node9":"Node 138"
+    },
+    "tout":"Environment:Site Outdoor Air Drybulb Temperature [C](TimeStep)",
+    "name":"90.1-2010 AirCooled WithCondenser  Chiller 0 258tons 1.3kW/ton"
+	}
+}

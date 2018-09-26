@@ -1,0 +1,9 @@
+{
+	"inputs" : {
+		"fans" : {
+		"fan1":"VAV WITH REHEAT Fan"
+    },
+    "Nodes" : {
+		"node1":"Node 57"
+    }}
+}
