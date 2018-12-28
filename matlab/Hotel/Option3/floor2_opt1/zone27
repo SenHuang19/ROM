@@ -1,0 +1,25 @@
+{
+	"inputs" : {
+		"zones":{
+		"node1":"Corridor_Flr_3 ZN"	
+		},
+		"adjzones":{
+		"node7":"Room_1_Flr_3 ZN"
+		},
+		"termoutlet":{
+		"node1":"Node 107"
+		},
+		"rhtoutlet":{
+		"node1":"Node 106"
+		},
+		"rhtinlet":{
+		"node1":"Node 105"
+		}		
+	},
+
+	"tout":"Environment:Site Outdoor Air Drybulb Temperature [C](TimeStep)",
+	"solar":{
+	"node1":"Environment:Site Diffuse Solar Radiation Rate per Area [W/m2](TimeStep)",
+	"node2":"Environment:Site Direct Solar Radiation Rate per Area [W/m2](TimeStep)"},
+	"hsp":"HTGSETP_SCH_YES_OPTIMUM:Schedule Value [](TimeStep)"
+}

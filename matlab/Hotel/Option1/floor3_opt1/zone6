@@ -1,0 +1,37 @@
+{
+	"inputs" : {
+		"zones":{
+		"node1":"Room_1_Flr_6 ZN",
+		"node2":"Room_2_Flr_6 ZN",
+		"node3":"Room_3_Mult9_Flr_6 ZN"
+		
+		},
+		"adjzones":{
+		"node1":"Banquet_Flr_6 ZN",
+		"node2":"Corridor_Flr_6 ZN",
+		"node3":"Dining_Flr_6 ZN",
+		"node4":"Kitchen_Flr_6 ZN"
+		},
+		"termoutlet":{
+		"node1":"Node 201",
+		"node2":"Node 207",
+		"node3":"Node 213"
+		},
+		"rhtoutlet":{
+		"node1":"Node 200",
+		"node2":"Node 206",
+		"node3":"Node 212"
+		},
+		"rhtinlet":{
+		"node1":"Node 199",
+		"node2":"Node 205",
+		"node3":"Node 211"
+		}
+	},
+
+	"tout":"Environment:Site Outdoor Air Drybulb Temperature [C](TimeStep)",
+	"solar":{
+	"node1":"Environment:Site Diffuse Solar Radiation Rate per Area [W/m2](TimeStep)",
+	"node2":"Environment:Site Direct Solar Radiation Rate per Area [W/m2](TimeStep)"},
+	"hsp":"HTGSETP_SCH_YES_OPTIMUM:Schedule Value [](TimeStep)"
+}

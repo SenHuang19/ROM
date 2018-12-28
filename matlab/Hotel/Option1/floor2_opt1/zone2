@@ -1,0 +1,45 @@
+{
+	"inputs" : {
+		"zones":{
+		"node1":"Room_1_Flr_3 ZN",
+		"node2":"Room_2_Flr_3 ZN",
+		"node3":"Room_3_Mult19_Flr_3 ZN",
+		"node4":"Room_4_Mult19_Flr_3 ZN",
+		"node5":"Room_5_Flr_3 ZN",
+		"node6":"Room_6_Flr_3 ZN"
+		},
+		"adjzones":{
+		"node1":"Corridor_Flr_3 ZN"
+		},
+		"termoutlet":{
+		"node1":"Node 165",
+		"node2":"Node 171",
+		"node3":"Node 177",
+		"node4":"Node 183",
+		"node5":"Node 189",
+		"node6":"Node 195"
+		},
+		"rhtoutlet":{
+		"node1":"Node 164",
+		"node2":"Node 170",
+		"node3":"Node 176",
+		"node4":"Node 182",
+		"node5":"Node 188",
+		"node6":"Node 194"
+		},
+		"rhtinlet":{
+		"node1":"Node 163",
+		"node2":"Node 169",
+		"node3":"Node 175",
+		"node4":"Node 181",
+		"node5":"Node 187",
+		"node6":"Node 193"
+		}
+	},
+
+	"tout":"Environment:Site Outdoor Air Drybulb Temperature [C](TimeStep)",
+	"solar":{
+	"node1":"Environment:Site Diffuse Solar Radiation Rate per Area [W/m2](TimeStep)",
+	"node2":"Environment:Site Direct Solar Radiation Rate per Area [W/m2](TimeStep)"},
+	"hsp":"HTGSETP_SCH_YES_OPTIMUM:Schedule Value [](TimeStep)"
+}

@@ -1,0 +1,30 @@
+{
+	"inputs" : {
+		"zones":{
+		"node1":"Core_bottom ZN"	
+		},
+		"adjzones":{
+		"node1":"Perimeter_bot_ZN_1 ZN",
+		"node2":"Perimeter_bot_ZN_2 ZN",
+		"node3":"Perimeter_bot_ZN_3 ZN",
+		"node4":"Perimeter_bot_ZN_4 ZN",
+		"node5":"GroundFloor_Plenum ZN",
+		"node6":"Basement ZN"
+		},
+		"termoutlet":{
+		"node1":"Node 105"
+		},
+		"rhtoutlet":{
+		"node1":"Node 104"
+		},
+		"rhtinlet":{
+		"node1":"Node 103"
+		}
+	},
+
+	"tout":"Environment:Site Outdoor Air Drybulb Temperature [C](TimeStep)",
+	"solar":{
+	"node1":"Environment:Site Diffuse Solar Radiation Rate per Area [W/m2](TimeStep)",
+	"node2":"Environment:Site Direct Solar Radiation Rate per Area [W/m2](TimeStep)"},
+	"hsp":"HTGSETP_SCH_YES_OPTIMUM:Schedule Value [](TimeStep)"
+}
